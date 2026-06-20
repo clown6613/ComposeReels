@@ -51,30 +51,27 @@ class ReelsViewModel @Inject constructor(
     private fun bindPage(page: Int) {
         val state = _uiState.value
         if (state !is ReelsUiState.Success) return
-        val reel = state.reels.getOrNull(page) ?: return
-        playerController.bind(reel)
+        if (page !in state.reels.indices) return
+        playerController.playAt(page)
         _uiState.update { (it as? ReelsUiState.Success)?.copy(currentPage = page) ?: it }
     }
 
     private fun loadReels() {
         viewModelScope.launch {
             reelsRepository.getReels().asResult().collect { result ->
-                _uiState.update {
-                    when (result) {
-                        Result.Loading -> ReelsUiState.Loading
-                        is Result.Success -> ReelsUiState.Success(reels = result.data)
-                            .also { state -> bindFirstReel(state) }
-                        is Result.Error -> ReelsUiState.Error(
-                            message = result.throwable.message ?: "Failed to load reels.",
-                        )
+                when (result) {
+                    Result.Loading -> _uiState.value = ReelsUiState.Loading
+                    is Result.Success -> {
+                        // Load the whole feed as one playlist, then auto-play the top reel.
+                        playerController.setReels(result.data)
+                        playerController.playAt(0)
+                        _uiState.value = ReelsUiState.Success(reels = result.data)
                     }
+                    is Result.Error -> _uiState.value = ReelsUiState.Error(
+                        message = result.throwable.message ?: "Failed to load reels.",
+                    )
                 }
             }
         }
-    }
-
-    /** Auto-play the top reel as soon as the feed arrives. */
-    private fun bindFirstReel(state: ReelsUiState.Success) {
-        state.reels.firstOrNull()?.let(playerController::bind)
     }
 }

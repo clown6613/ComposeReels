@@ -30,7 +30,7 @@ class ReelPlayerController @Inject constructor(
     /** Observable playback state for the UI. */
     val playbackState: StateFlow<PlaybackState> = _playbackState.asStateFlow()
 
-    private var boundMediaId: String? = null
+    private var loadedReelIds: List<String> = emptyList()
 
     init {
         player.addListener(
@@ -49,19 +49,26 @@ class ReelPlayerController @Inject constructor(
     }
 
     /**
-     * Bind the shared player to [reel] and start playback. No-op if it is already the
-     * current item, which makes repeated calls on configuration changes cheap.
+     * Load the whole feed as a single playlist on the shared player. ExoPlayer then pre-buffers the
+     * neighbouring items, so swiping to the next reel starts much faster. No-op if the same feed is
+     * already loaded, which makes repeated calls on recomposition/config-change cheap.
      */
-    fun bind(reel: Reel) {
-        if (boundMediaId == reel.id) {
-            player.playWhenReady = true
-            return
-        }
-        boundMediaId = reel.id
-        player.setMediaItem(reel.toMediaItem())
+    fun setReels(reels: List<Reel>) {
+        val ids = reels.map { it.id }
+        if (ids == loadedReelIds) return
+        loadedReelIds = ids
+        player.setMediaItems(reels.map { it.toMediaItem() })
         player.prepare()
+    }
+
+    /** Make [index] the current reel and start playback. */
+    fun playAt(index: Int) {
+        if (index !in loadedReelIds.indices) return
+        if (player.currentMediaItemIndex != index) {
+            player.seekToDefaultPosition(index)
+        }
         player.playWhenReady = true
-        _playbackState.value = _playbackState.value.copy(currentMediaId = reel.id)
+        _playbackState.value = _playbackState.value.copy(currentMediaId = loadedReelIds[index])
     }
 
     /** Resume playback of the currently bound reel. */
@@ -85,7 +92,7 @@ class ReelPlayerController @Inject constructor(
      * singleton outlives any screen.
      */
     fun release() {
-        boundMediaId = null
+        loadedReelIds = emptyList()
         player.release()
     }
 }
