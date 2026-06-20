@@ -32,10 +32,11 @@ so coding agents (and people) can extend it confidently.
 - 🤖 **AI-ready** — a [`CLAUDE.md`](CLAUDE.md) documents the conventions so AI agents (and humans)
   can extend the project confidently.
 
-## 📸 Screenshots
+## 🎬 Demo
 
-<!-- TODO: add a screen recording / GIF of the reels feed here. -->
-_Add a demo GIF here._
+<p align="center">
+  <img src="docs/demo.gif" alt="ComposeReels demo — swiping through the reels feed" width="280" />
+</p>
 
 ## 🏛️ Architecture
 
@@ -141,11 +142,25 @@ convention plugins.
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) and our
 [Code of Conduct](CODE_OF_CONDUCT.md).
 
+## 🎞️ Credits & third-party assets
+
+The sample reels are **referenced by URL for demonstration only** — they are not redistributed in
+this repository and are **not covered by this project's license**:
+
+- **Big Buck Bunny**, **Sintel** — © [Blender Foundation](https://www.blender.org), licensed under
+  [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- **BipBop** HLS test stream — © Apple Inc. (public test asset).
+- HLS test stream from [Mux](https://test-streams.mux.dev) (public test asset).
+- Placeholder thumbnails from [Lorem Picsum](https://picsum.photos) (images from
+  [Unsplash](https://unsplash.com/license)).
+
+Third-party libraries retain their own licenses (Apache-2.0 / MIT). See [NOTICE](NOTICE).
+
+All trademarks are the property of their respective owners. ComposeReels is **not affiliated with,
+endorsed by, or sponsored by** TikTok, Instagram, Google, Apple, Mux, or the Blender Foundation.
+
 ## 📄 License
 
-Licensed under the [Apache License 2.0](LICENSE).
-
-Sample videos © their respective owners (Blender Foundation open movies; Apple and Mux HLS test
-streams), used here for demonstration purposes only.
+Licensed under the [Apache License 2.0](LICENSE); see also [NOTICE](NOTICE).
 
 [nia]: https://github.com/android/nowinandroid
