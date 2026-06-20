@@ -14,7 +14,7 @@ tech stack and architecture Google recommends. It's a clean, readable reference 
 made **AI-friendly** by a [`CLAUDE.md`](CLAUDE.md) that spells out the architecture and conventions
 so coding agents (and people) can extend it confidently.
 
-> Swipe through a TikTok-style feed of full-screen videos, all driven by a **single, shared
+> Swipe through a vertical, full-screen short-video feed, all driven by a **single, shared
 > ExoPlayer instance**.
 
 ## ✨ Highlights
