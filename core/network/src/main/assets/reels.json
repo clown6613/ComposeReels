@@ -1,0 +1,52 @@
+[
+  {
+    "id": "big-buck-bunny",
+    "title": "Big Buck Bunny",
+    "author": "Blender Foundation",
+    "description": "A giant rabbit takes sweet revenge on three bullying rodents. #animation",
+    "video_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
+    "thumbnail_url": "https://picsum.photos/seed/bigbuckbunny/720/1280",
+    "like_count": 128400,
+    "source": "MP4"
+  },
+  {
+    "id": "sintel-trailer",
+    "title": "Sintel",
+    "author": "Blender Foundation",
+    "description": "A lonely warrior searches for her lost dragon companion. #animation",
+    "video_url": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+    "thumbnail_url": "https://picsum.photos/seed/sintel/720/1280",
+    "like_count": 112050,
+    "source": "MP4"
+  },
+  {
+    "id": "big-buck-bunny-blender",
+    "title": "Big Buck Bunny (Blender)",
+    "author": "Peach Open Movie Project",
+    "description": "The original short, served straight from blender.org. #openmovie",
+    "video_url": "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
+    "thumbnail_url": "https://picsum.photos/seed/peach/720/1280",
+    "like_count": 54120,
+    "source": "MP4"
+  },
+  {
+    "id": "apple-bipbop-hls",
+    "title": "BipBop (HLS)",
+    "author": "Apple",
+    "description": "Apple's classic adaptive HLS test stream. #streaming #hls",
+    "video_url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+    "thumbnail_url": "https://picsum.photos/seed/bipbop/720/1280",
+    "like_count": 47890,
+    "source": "HLS"
+  },
+  {
+    "id": "mux-test-hls",
+    "title": "Tears of Steel (HLS)",
+    "author": "Mux",
+    "description": "An adaptive HLS test stream from Mux. #streaming #hls",
+    "video_url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "thumbnail_url": "https://picsum.photos/seed/mux/720/1280",
+    "like_count": 61230,
+    "source": "HLS"
+  }
+]
