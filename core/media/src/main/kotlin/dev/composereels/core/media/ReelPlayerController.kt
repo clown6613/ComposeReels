@@ -95,8 +95,10 @@ private fun Reel.toMediaItem(): MediaItem = MediaItem.Builder()
     .setMediaId(id)
     .setUri(videoUrl)
     .apply {
-        if (source == ReelSource.HLS) {
-            setMimeType(MimeTypes.APPLICATION_M3U8)
+        when (source) {
+            ReelSource.HLS -> setMimeType(MimeTypes.APPLICATION_M3U8)
+            ReelSource.DASH -> setMimeType(MimeTypes.APPLICATION_MPD)
+            ReelSource.MP4 -> Unit // Inferred from the URI.
         }
     }
     .build()

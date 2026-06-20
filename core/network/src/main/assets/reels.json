@@ -48,5 +48,15 @@
     "thumbnail_url": "https://picsum.photos/seed/mux/720/1280",
     "like_count": 61230,
     "source": "HLS"
+  },
+  {
+    "id": "shaka-sintel-dash",
+    "title": "Sintel (DASH)",
+    "author": "Shaka",
+    "description": "An adaptive DASH stream from the Shaka demo assets. #streaming #dash",
+    "video_url": "https://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd",
+    "thumbnail_url": "https://picsum.photos/seed/shaka/720/1280",
+    "like_count": 33120,
+    "source": "DASH"
   }
 ]

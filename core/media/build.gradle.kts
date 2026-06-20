@@ -15,4 +15,5 @@ dependencies {
     api(libs.media3.common)
 
     implementation(libs.media3.exoplayer.hls)
+    implementation(libs.media3.exoplayer.dash)
 }

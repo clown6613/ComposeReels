@@ -3,8 +3,9 @@
 [English] | [日本語](README.ja.md)
 
 A modern, open-source **vertical reels (short-video) app** for Android, built entirely with the
-tech stack and architecture Google recommends. It's designed to be a clean, readable reference —
-and a ready-to-use **template for AI-driven development**.
+tech stack and architecture Google recommends. It's a clean, readable reference implementation,
+made **AI-friendly** by a [`CLAUDE.md`](CLAUDE.md) that spells out the architecture and conventions
+so coding agents (and people) can extend it confidently.
 
 > Swipe through a TikTok-style feed of full-screen videos, all driven by a **single, shared
 > ExoPlayer instance**.
