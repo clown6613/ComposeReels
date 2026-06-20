@@ -1,0 +1,29 @@
+ComposeReels
+Copyright 2026 The ComposeReels Authors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+------------------------------------------------------------------------
+Third-party dependencies
+------------------------------------------------------------------------
+This product depends on open-source libraries distributed under permissive
+licenses (Apache-2.0 / MIT), including AndroidX & Jetpack Compose, Dagger
+Hilt, AndroidX Media3 (ExoPlayer), Coil, Retrofit, OkHttp, and the Kotlin
+and kotlinx libraries. Each retains its own copyright and license.
+
+------------------------------------------------------------------------
+Sample media (referenced by URL for demonstration only; NOT covered by the
+Apache-2.0 license above and NOT redistributed in this repository)
+------------------------------------------------------------------------
+- "Big Buck Bunny" and "Sintel" — (c) Blender Foundation,
+  https://www.blender.org, licensed under Creative Commons Attribution 3.0
+  (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/
+- HLS test stream "BipBop" — (c) Apple Inc., provided as a public test asset.
+- HLS test stream from Mux (https://test-streams.mux.dev), provided as a
+  public test asset.
+- Placeholder thumbnail images from Lorem Picsum (https://picsum.photos),
+  sourced from Unsplash (https://unsplash.com/license).
+
+All trademarks are the property of their respective owners. ComposeReels is
+not affiliated with, endorsed by, or sponsored by TikTok, Instagram, Google,
+Apple, Mux, or the Blender Foundation.
