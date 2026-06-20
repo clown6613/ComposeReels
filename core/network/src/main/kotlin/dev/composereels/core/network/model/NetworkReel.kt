@@ -1,7 +1,13 @@
+// The generated @Serializable code references kotlinx.serialization's internal GeneratedSerializer.
+// The build handles this opt-in automatically, but some IDE analyzers flag it; opt in at file level
+// to keep the editor clean. Harmless to the build.
+@file:OptIn(InternalSerializationApi::class)
+
 package dev.composereels.core.network.model
 
 import dev.composereels.core.model.Reel
 import dev.composereels.core.model.ReelSource
+import kotlinx.serialization.InternalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

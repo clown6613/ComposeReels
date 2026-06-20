@@ -33,14 +33,15 @@ class ReelsViewModelTest {
     }
 
     @Test
-    fun `binds the first reel as soon as the feed loads`() = runTest {
+    fun `loads the feed as a playlist and plays the first reel`() = runTest {
         ReelsViewModel(FakeReelsRepository(testReels), playerController)
 
-        verify { playerController.bind(testReels.first()) }
+        verify { playerController.setReels(testReels) }
+        verify { playerController.playAt(0) }
     }
 
     @Test
-    fun `PageSettled binds the selected reel and updates currentPage`() = runTest {
+    fun `PageSettled plays the selected reel and updates currentPage`() = runTest {
         val viewModel = ReelsViewModel(FakeReelsRepository(testReels), playerController)
 
         viewModel.onEvent(ReelEvent.PageSettled(1))
@@ -49,7 +50,7 @@ class ReelsViewModelTest {
             val state = awaitItem() as ReelsUiState.Success
             assertEquals(1, state.currentPage)
         }
-        verify { playerController.bind(testReels[1]) }
+        verify { playerController.playAt(1) }
     }
 
     @Test
