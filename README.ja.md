@@ -2,6 +2,13 @@
 
 [English](README.md) | [日本語]
 
+[![CI](https://github.com/clown6613/ComposeReels/actions/workflows/ci.yml/badge.svg)](https://github.com/clown6613/ComposeReels/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+![minSdk](https://img.shields.io/badge/minSdk-26-brightgreen)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.1-7F52FF?logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white)
+![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 Google が推奨する技術スタックとアーキテクチャだけで作った、モダンでオープンソースな
 **縦スワイプ型リール（短尺動画）アプリ** です。読みやすいリファレンス実装で、
 [`CLAUDE.md`](CLAUDE.md) にアーキテクチャと規約を明文化し、**AI（コーディングエージェント）が

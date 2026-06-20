@@ -2,6 +2,13 @@
 
 [English] | [日本語](README.ja.md)
 
+[![CI](https://github.com/clown6613/ComposeReels/actions/workflows/ci.yml/badge.svg)](https://github.com/clown6613/ComposeReels/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+![minSdk](https://img.shields.io/badge/minSdk-26-brightgreen)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.1-7F52FF?logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white)
+![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 A modern, open-source **vertical reels (short-video) app** for Android, built entirely with the
 tech stack and architecture Google recommends. It's a clean, readable reference implementation,
 made **AI-friendly** by a [`CLAUDE.md`](CLAUDE.md) that spells out the architecture and conventions
